@@ -9,7 +9,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class AppComponent implements OnInit {
 
-  title = 'angular';
+  title = 'Angular Projesi';
 
   constructor(
     private toastr: ToastrService, 
