@@ -5,10 +5,13 @@
 
 @import '~ngx-toastr/toastr';
 
-@import './assets/style/_toast.scss';
+@import './assets/style/toast';
 
-@import './assets/style/igx-theme.scss';
 @import './assets/style/variables.scss';
+
+@import './assets/style/igx-theme';
+@import './assets/style/igx-navbar';
+
 
 
 

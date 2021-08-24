@@ -11,11 +11,17 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { NgxSpinnerModule } from "ngx-spinner";
 
-import { IgxButtonModule } from 'igniteui-angular';
+import { IgxNavbarModule, IgxIconModule, IgxNavigationDrawerModule } from 'igniteui-angular';
+import { RoleComponent } from './role/role.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoleComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import { IgxButtonModule } from 'igniteui-angular';
       progressAnimation: "decreasing"
     }),
     NgxSpinnerModule,
-    IgxButtonModule
+    IgxNavbarModule,
+    IgxIconModule,
+    IgxNavigationDrawerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

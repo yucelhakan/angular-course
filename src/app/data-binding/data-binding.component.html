@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>One Way <span style="font-size: .9rem;">(Component to DOM)</span></h2>
+        <div class="row">
+            <div class="col-md-2">
+                <h3>Interpolition</h3>
+                <p><img src="{{ user.image }}" alt="yucelhakan" style="width: 100%;"></p>
+
+                <p><b>Full Name: </b> {{user.name}} {{user.surname}}</p>
+                
+                <p><b>Meslek: </b> {{user.job}}</p>
+
+            </div>
+
+            <div class="col-md-3">
+                <h3>Property Binding</h3>
+                <input type="text" [value]="user.name">
+            </div>
+            
+            <div class="col-md-3">
+                <h3>Attr Binding</h3>
+                <input type="text" [value]="user.name" [attr.disabled]="!user.editTable ? 'disabled' : null">
+            </div>
+            
+            <div class="col-md-2">
+                <h3>Class Binding</h3>
+                <p [class.red]="user.name==='Hakan' ? true : false">Renk değeri</p>
+            </div>
+            
+            <div class="col-md-2">
+                <h3>Event Binding <span style="font-size: .9rem;">(DOM to Component)</span></h3>
+                <input type="text" (keyup.enter)="inputKey($event)">
+                <button (click)="buttonClick()">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" style="margin-top: 20px;">
+        <h2>Two Way </h2>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>ngModel</h3>
+                <input type="text" [(ngModel)]="user.name">
+            </div>
+        </div>
+    </div>
+</div>
